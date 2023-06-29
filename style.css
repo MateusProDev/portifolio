@@ -21,6 +21,11 @@ header {
   margin-left: -20px;
 }
 
+#elemento img{
+  width: 25px;
+  margin-left: 120px;
+}
+
 .containerNav {
   display: none;
   cursor: pointer;
@@ -61,6 +66,7 @@ header {
 
 .containerNav {
   display: block;
+  margin: 0 0 5px 10px;
 }
 
 .containerNav.active .line:nth-child(1) {
@@ -104,7 +110,7 @@ header {
 
 /* INICIO DO CORPO */
 .banner{
-  height: 500px;
+  height: 360px;
   text-align: center;
   padding-top: 180px;
   text-shadow: 4px 3px 5px rgba(0, 0, 0, 0.459);
