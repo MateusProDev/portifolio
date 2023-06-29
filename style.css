@@ -22,8 +22,8 @@ header {
 }
 
 #elemento img{
-  width: 25px;
-  margin-left: 120px;
+  width: 22px;
+  margin: 5px 0 0 100px;
 }
 
 .containerNav {
@@ -66,7 +66,7 @@ header {
 
 .containerNav {
   display: block;
-  margin: 0 0 5px 10px;
+  margin: 0 0 5px 30px;
 }
 
 .containerNav.active .line:nth-child(1) {
