@@ -27,14 +27,14 @@ var body = document.body;
 var titulo = document.querySelector("h1");
 var paragrafos = document.querySelectorAll("p");
 var corOriginal = {
-  backgroundColor: body.style.backgroundColor,
-  color: body.style.color,
-  tituloColor: titulo.style.color,
+  backgroundColor: getComputedStyle(body).backgroundColor,
+  color: getComputedStyle(body).color,
+  tituloColor: getComputedStyle(titulo).color,
   paragrafoColors: []
 };
 
 paragrafos.forEach(function(paragrafo) {
-  corOriginal.paragrafoColors.push(paragrafo.style.color);
+  corOriginal.paragrafoColors.push(getComputedStyle(paragrafo).color);
 });
 
 var elementoUm = document.getElementById("elementoUm");
@@ -46,7 +46,7 @@ elementoUm.addEventListener("click", function() {
     body.style.color = corOriginal.color;
     titulo.style.color = corOriginal.tituloColor;
     paragrafos.forEach(function(paragrafo, index) {
-    paragrafo.style.color = corOriginal.paragrafoColors[index];
+      paragrafo.style.color = corOriginal.paragrafoColors[index];
     });
     clicado = false;
   } else {
@@ -60,7 +60,7 @@ elementoUm.addEventListener("click", function() {
   }
 });
 
-var elementoUm = document.getElementById("elementoDois");
+var elementoDois = document.getElementById("elementoDois");
 
 elementoDois.addEventListener("click", function() {
   if (clicado) {
@@ -68,7 +68,7 @@ elementoDois.addEventListener("click", function() {
     body.style.color = corOriginal.color;
     titulo.style.color = corOriginal.tituloColor;
     paragrafos.forEach(function(paragrafo, index) {
-    paragrafo.style.color = corOriginal.paragrafoColors[index];
+      paragrafo.style.color = corOriginal.paragrafoColors[index];
     });
     clicado = false;
   } else {
