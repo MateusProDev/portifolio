@@ -37,10 +37,10 @@ paragrafos.forEach(function(paragrafo) {
   corOriginal.paragrafoColors.push(paragrafo.style.color);
 });
 
-var elemento = document.getElementById("elemento");
+var elementoUm = document.getElementById("elementoUm");
 var clicado = false;
 
-elemento.addEventListener("click", function() {
+elementoUm.addEventListener("click", function() {
   if (clicado) {
     body.style.backgroundColor = corOriginal.backgroundColor;
     body.style.color = corOriginal.color;
@@ -60,4 +60,25 @@ elemento.addEventListener("click", function() {
   }
 });
 
+var elementoUm = document.getElementById("elementoDois");
+
+elementoDois.addEventListener("click", function() {
+  if (clicado) {
+    body.style.backgroundColor = corOriginal.backgroundColor;
+    body.style.color = corOriginal.color;
+    titulo.style.color = corOriginal.tituloColor;
+    paragrafos.forEach(function(paragrafo, index) {
+    paragrafo.style.color = corOriginal.paragrafoColors[index];
+    });
+    clicado = false;
+  } else {
+    body.style.backgroundColor = "#11a1bb";
+    body.style.color = "black";
+    titulo.style.color = "#fff";
+    paragrafos.forEach(function(paragrafo) {
+      paragrafo.style.color = "";
+    });
+    clicado = true;
+  }
+});
 
