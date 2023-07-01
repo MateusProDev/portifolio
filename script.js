@@ -27,14 +27,14 @@ var body = document.body;
 var titulo = document.querySelector("h1");
 var paragrafos = document.querySelectorAll("p");
 var corOriginal = {
-  backgroundColor: getComputedStyle(body).backgroundColor,
-  color: getComputedStyle(body).color,
-  tituloColor: getComputedStyle(titulo).color,
+  backgroundColor: body.style.backgroundColor,
+  color: body.style.color,
+  tituloColor: titulo.style.color,
   paragrafoColors: []
 };
 
 paragrafos.forEach(function(paragrafo) {
-  corOriginal.paragrafoColors.push(getComputedStyle(paragrafo).color);
+  corOriginal.paragrafoColors.push(paragrafo.style.color);
 });
 
 var elementoUm = document.getElementById("elementoUm");
@@ -46,7 +46,7 @@ elementoUm.addEventListener("click", function() {
     body.style.color = corOriginal.color;
     titulo.style.color = corOriginal.tituloColor;
     paragrafos.forEach(function(paragrafo, index) {
-      paragrafo.style.color = corOriginal.paragrafoColors[index];
+    paragrafo.style.color = corOriginal.paragrafoColors[index];
     });
     clicado = false;
   } else {
@@ -60,7 +60,7 @@ elementoUm.addEventListener("click", function() {
   }
 });
 
-var elementoDois = document.getElementById("elementoDois");
+var elementoUm = document.getElementById("elementoDois");
 
 elementoDois.addEventListener("click", function() {
   if (clicado) {
@@ -68,7 +68,7 @@ elementoDois.addEventListener("click", function() {
     body.style.color = corOriginal.color;
     titulo.style.color = corOriginal.tituloColor;
     paragrafos.forEach(function(paragrafo, index) {
-      paragrafo.style.color = corOriginal.paragrafoColors[index];
+    paragrafo.style.color = corOriginal.paragrafoColors[index];
     });
     clicado = false;
   } else {
@@ -82,3 +82,47 @@ elementoDois.addEventListener("click", function() {
   }
 });
 
+// redes rolagem 20%
+
+window.addEventListener('scroll', function() {
+  var redesSociais = document.querySelector('.redes-sociais');
+  var distanciaTopo = document.documentElement.scrollTop || document.body.scrollTop;
+  var alturaTela = window.innerHeight;
+  var limiteAparecer = alturaTela * 0.9;
+
+  if (distanciaTopo > limiteAparecer) {
+    redesSociais.classList.add('show');
+  } else {
+    redesSociais.classList.remove('show');
+  }
+})
+
+// acão do formulario
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+
+  // Obtém o valor do campo de e-mail
+  var email = document.getElementById("email").value;
+
+  // Configuração do endpoint do Getform.io
+  var endpoint = "YOUR_FORM_ENDPOINT";
+
+  // Envia os dados do formulário para o endpoint usando o Fetch API
+  fetch(endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ email: email })
+  })
+    .then(function(response) {
+      // Exibe a mensagem de sucesso
+      var successMessage = document.getElementById("success-message");
+      successMessage.classList.remove("hidden");
+    })
+    .catch(function(error) {
+      // Exibe mensagem de erro
+      console.error("Erro ao enviar o e-mail:", error);
+    });
+});
