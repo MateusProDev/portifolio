@@ -42,7 +42,7 @@ header {
 
 /* modelo para console */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 460px){
   .nav-links {
     display: none;
   }
@@ -152,9 +152,7 @@ header {
   }
   
   .containerCard{
-    overflow: scroll;
     height: 300px;
-    display: flex;
     margin: 0px 10px 20px 0;
     padding: 20px 0 20px 0px;
   }
@@ -180,16 +178,14 @@ header {
   }
 
   .containerCardBox{
-    width: auto;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
   
   .containerCard{
-    height: 350px;
-    display: flex;
-    margin: 0 0 0 20px;
-    padding: 20px 0 20px 0px;
+    height: auto;
+    margin-right: -1px;
   }
   .cardCodeBox{
     width: auto;
@@ -207,15 +203,16 @@ header {
   .cardTop{
     background-image: 0;
     background-color: #5f5f5f;
-    border-radius: 10px 10px 0 0 ;
-    width: 300px;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 0 0 10px;
     height: 30px;
     display: flex;
     border-bottom: 1px solid black;
   }
   
   .cardCorpo {
-      width: auto;
+      width: 200px;
+      height: 300px;
       padding: 10px 10px 0 10px;
       text-align: justify;
   }
@@ -228,7 +225,7 @@ header {
   }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 460px){
   body h1{
     margin: 30px 0;
     font-size: 40px;
@@ -367,6 +364,30 @@ header {
 }
 
 /* INICIO DO CORPO */
+.redes-sociais {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: #f1f1f1be;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.redes-sociais.show {
+  opacity: 1;
+}
+
+.redes-sociais img {
+  width: 30px;
+  height: 30px;
+  margin: 5px 0;
+}
+
 .banner{
   height: 360px;
   text-align: center;
@@ -622,9 +643,7 @@ header {
 
 /* INICIO DO RODAPÉ DO SITE*/
 
-.imgFloat{
-  padding: 30px 0 0px 20px;
-}
+
 
 .imgFloat img{
   width: 140px;
@@ -645,25 +664,6 @@ header {
   100% {
     transform: translateY(0px);
   }
-}
-.git p {
-    font-size: 12px;
-}
-
-.giticon ul  {
-    color: #fff;
-    display: flex;
-    margin-left: -78px;
-}
-
-.giticon li {
-    display: flex;
-    margin: 0 10px 0 0;
-}
-
-.giticon img {
-    width: 20px;
-    height: 20px;
 }
 
 hr {
@@ -690,20 +690,77 @@ section h2 {
 .linhabottom {
     width: 145px;
     border-color: #ffffff;
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
-    margin: 0px 0;
-    padding: 10px 0px 10px 0px;
-    color: #ffffff;
-    font-size: 10px;
-    text-align: center;
+  
+  font-size: 10px;
+  text-align: center;
+  margin-top: -20px;
+  padding: 20px 0px 10px 0px;
+  color: #ffffff;
+  background-color:  #5f5f5f;
 }
 
 footer a {
     color: rgb(215, 215, 215);
     text-decoration: none;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+input[type="text"],
+input[type="email"]
+ {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.comentario_form{
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.botao_form{
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+.hidden {
+  display: none;
 }
 
 /* FIM DO RODAPÉ DO SITE*/
