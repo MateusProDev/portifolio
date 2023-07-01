@@ -31,6 +31,8 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
+  margin-left: -50px;
+  padding: 0;
 }
 
   
@@ -176,6 +178,56 @@ header {
   .projetos p{
     padding: 0;
   }
+  .containerHover{
+    display: flex;
+    overflow: scroll;
+    margin: 0px -20px 20px 0;
+    gap: 5px;
+  }
+  .item{
+      height: 700px;
+      background-color: rgb(231, 231, 231);
+      color: #181818;
+      transition: 0.5s;
+      cursor: pointer;
+      text-align: center;
+  }
+
+  .item h2{
+      font-size: 16px;
+  }
+
+  .item h2, p{
+      padding: 7px;
+  }
+
+  .item img{
+      width: 220px;
+  }
+
+  .btn{
+      text-align: center;
+  }
+
+  .btn button{
+      border-radius: 20px;
+      padding: 5px;
+  }
+
+  .item button{
+      width: 70%;
+      border: none;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.255);
+  }
+
+  .item:hover {
+      opacity: 0.9;
+  }
+
+  .item:not(:hover){
+      opacity: 0.5;
+      transform: scale(0.9);
+  }
 
   .containerCardBox{
     width: 90%;
@@ -212,8 +264,7 @@ header {
   
   .cardCorpo {
       width: 200px;
-      height: 300px;
-      padding: 10px 10px 0 10px;
+      padding: 10px 10px 20px 10px;
       text-align: justify;
   }
   .code-box {
@@ -222,6 +273,82 @@ header {
     margin-top: 20px;
     padding: 0 15px;
     color: #fdcf01;
+  }
+
+  footer {
+    font-size: 10px;
+    color: #ffffff;
+    background-color:  #5f5f5f;
+    line-height: 2;
+    
+  }
+
+  #linhaLu{
+    border: 5px;
+    background-image: linear-gradient(to right, #f72530, #7209B7, #3A0CA3, #43e8ee, #4CC9F0);
+    height: 2px;
+    width: 100%;
+  }
+  
+  footer a {
+      color: rgb(215, 215, 215);
+      text-decoration: none;
+  }
+  .imgFloat{
+    margin: 0 0 0 0;
+
+  }
+  .imgFloat img{
+    width: 180px;
+    margin-bottom: -5px;
+    transform: translateY(0px);
+    animation: float 3s ease-in-out infinite;
+  }
+  #contatos{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+  }
+  
+  address {
+    width: 300px;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  footer .linhabottom {
+      width: 180px;
+      border-color: #ffffff;
+  }
+  
+  .formulario{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+  }
+  form {
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  form h2 {
+    font-size: 20px;
+    margin-top: 0;
+    text-align: center;
+  }
+  #autor{
+    margin: 10px 0 10px 0;
+    font-size: 11px;
+    color: #ebebeb;
+    text-align: center;
+    padding: 0 10px;
+  }
+  #autor a{
+    color: #ebebeb;
+    text-decoration: none;
   }
 }
 
@@ -293,11 +420,68 @@ header {
     text-align: center;
     background-color: #cccccc62;
     border-radius: 20px;
-    padding: 20px 10%;
+    padding: 20px 0;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.401);
   }
   .projetos h1{
     margin-left: 1px;
+  }
+
+  .containerHover{
+    width: 100%;
+    height: 950px;
+    display: flex;
+    overflow: scroll;
+    gap: 5px;
+   }
+
+  .item{
+    width: 300px;
+    height: 900px;
+    background-color: rgb(231, 231, 231);
+    color: #181818;
+    transition: 0.5s;
+    cursor: pointer;
+    text-align: center;
+  }
+  .destaque{
+    margin-left: 45px;
+  }
+
+  .item h2{
+    font-size: 16px;
+  }
+
+  .item h2, p{
+    padding: 7px;
+  }
+
+  .item img{
+    width: 300px;
+  }
+
+  .btn{
+    text-align: center;
+  }
+
+  .btn button{
+    border-radius: 20px;
+      padding: 5px;
+  }
+
+  .item button{
+    width: 70%;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.255);
+  }
+
+  .item:hover {
+    opacity: 0.9;
+  }
+
+  .item:not(:hover){
+    opacity: 0.5;
+    transform: scale(0.9);
   }
 
   .containerBanner {
@@ -316,18 +500,19 @@ header {
   }
   .containerCardBox{
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 20px auto;
   }
   
   .containerCard{
-    height: 350px;
+    height: auto;
     display: flex;
     margin: 0;
     padding: 20px 0 20px 0px;
   }
   .cardCodeBox{
-    width: 600px;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
     border-radius: 20px;
     box-shadow: 4px 4px 4px #fff;
   }
@@ -340,11 +525,12 @@ header {
     
   }
   .cardTop{
+    width: 100%;
+    height: 30px;
+    padding: 10px -10px 0 10px;
     background-image: 0;
     background-color: #5f5f5f;
     border-radius: 10px 10px 0 0 ;
-    width: 100%;
-    height: 30px;
     display: flex;
     border-bottom: 1px solid black;
   }
@@ -360,6 +546,81 @@ header {
     margin-top: 20px;
     padding: 0 15px;
     color: #fdcf01;
+  }
+  .containerEnd{
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .imgFloat img{
+    width: 180px;
+    margin-bottom: -5px;
+    transform: translateY(0px);
+    animation: float 3s ease-in-out infinite;
+  }
+  footer {
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+    margin-top: -20px;
+    padding: 0px 0px 0px 0px;
+    color: #ffffff;
+    background-color:  #5f5f5f;
+    line-height: 2;
+  }
+  footer hr{
+    border: 5px;
+    background-image: linear-gradient(to right, #f72530, #7209B7, #3A0CA3, #43e8ee, #4CC9F0);
+    height: 2px;
+    width: 100%;
+  }
+  
+  footer a {
+      color: rgb(215, 215, 215);
+      text-decoration: none;
+  }
+  
+  #contatos{
+    padding: 20px;
+  }
+  
+  address {
+    width: 300px;
+    font-size: 22px;
+    text-align: left;
+  }
+  
+  .linhabottom {
+      width: 180px;
+      border-color: #ffffff;
+      margin: 0;
+  }
+  
+  .formulario{
+    width: 300px;
+  }
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  form h2 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+  #autor{
+    margin: 10px 0 10px 0;
+    font-size: 16px;
+    color: #ebebeb;
+    text-align: center;
+    padding: 0;
+  }
+  #autor a{
+    color: #ebebeb;
+    text-decoration: none;
   }
 }
 
@@ -535,57 +796,6 @@ header {
       color: #5555;
   }
 }
-.containerHover{
-    display: flex;
-    overflow: scroll;
-    margin: 0px -20px 20px 0;
-    gap: 5px;
-}
-
-.item{
-    height: 700px;
-    background-color: rgb(231, 231, 231);
-    color: #181818;
-    transition: 0.5s;
-    cursor: pointer;
-    text-align: center;
-}
-
-.item h2{
-    font-size: 16px;
-}
-
-.item h2, p{
-    padding: 7px;
-}
-
-.item img{
-    width: 220px;
-}
-
-.btn{
-    text-align: center;
-}
-
-.btn button{
-    border-radius: 20px;
-    padding: 5px;
-}
-
-.item button{
-    width: 70%;
-    border: none;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.255);
-}
-
-.item:hover {
-    opacity: 0.9;
-}
-
-.item:not(:hover){
-    opacity: 0.5;
-    transform: scale(0.9);
-}
 
 .cardBoxTexto{
   text-align: center;
@@ -643,17 +853,6 @@ header {
 
 /* INICIO DO RODAPÉ DO SITE*/
 
-
-
-.imgFloat img{
-  width: 140px;
-  margin-bottom: -5px;
-  margin-left: auto;
-  margin-right: auto;
-  transform: translateY(0px);
-  animation: float 3s ease-in-out infinite;
-}
-
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -666,56 +865,6 @@ header {
   }
 }
 
-hr {
-    border-color: rgb(185, 219, 241);
-}
-
-section {
-    margin: 20px;
-}
-
-address {
-    font-size: 12px;
-}
-address a{
-    text-decoration: none;
-    color: #5f5f5f;
-}
-
-section h2 {
-    font-size: 12px;
-}
-
-
-.linhabottom {
-    width: 145px;
-    border-color: #ffffff;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-footer {
-  
-  font-size: 10px;
-  text-align: center;
-  margin-top: -20px;
-  padding: 20px 0px 10px 0px;
-  color: #ffffff;
-  background-color:  #5f5f5f;
-}
-
-footer a {
-    color: rgb(215, 215, 215);
-    text-decoration: none;
-}
-
-form {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
 input[type="text"],
 input[type="email"]
  {
@@ -744,8 +893,9 @@ input[type="email"]
   width: 80%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.384);
   margin-left: auto;
   margin-right: auto;
 }
