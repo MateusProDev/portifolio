@@ -140,7 +140,31 @@ header {
     background-color: #cccccc62;
     border-radius: 20px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.401);
+    animation: sobreAparecer 2s ease-in;
   }
+  @keyframes sobreAparecer {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    25%{
+      opacity: 0;
+      transform: translateX(-70%);
+    }
+    50% {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    75% {
+      opacity: 0;
+      transform: translateX(-25%);
+    }
+    100% {
+      opacity: 0.4;
+      transform: translate(-0%);
+    }
+  }
+
   .sobre h1, p{
     margin-left: 0px;
   }
@@ -694,119 +718,6 @@ header {
   object-fit: cover;
 }
 
-.containerCliqueInterativo{
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.cliqueBox {
-  animation: expandBox 5s infinite;
-  }
-
-.boxUm {
-  background-color: red;
-  position: relative;
-  animation: boxUmExpand 15s infinite;
-}
-
-@keyframes boxUmExpand {
-  0% {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-  }
-
-  50% {
-    width: 200px;
-    height: 50px;
-    border-radius: 50px;
-    transform: translate(160%, 90%);
-  }
-
-  100% {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-  }
-}
-
-.boxDois {
-  background-color: orange;
-  animation: boxDoisExpand 15s infinite;
-}
-
-@keyframes boxDoisExpand {
-  0% {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-
-  50% {
-      width: 200px;
-      height: 50px;
-      border-radius: 50px;
-      transform: translate(-20%, 70%);
-  }
-  100% {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-}
-
-.boxTres {
-  background-color: green;
-  animation: boxTresExpand 15s infinite;
-}
-
-@keyframes boxTresExpand {
-  0% {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-
-  50% {
-    width: 250px;
-    height: 50px;
-    border-radius: 50px;
-    transform: translate(-90px, 40px);
-  }
-
-  100% {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-}
-
-.cliqueBox P{
-  animation: P 15s infinite;
-}
-
-@keyframes P {
-  0% {
-      font-size: 0px;
-      text-align: center;
-      color: #5555;
-  }
-
-  50% {
-      text-align: center;
-      font-size: 11px;
-      color: #fff;
-      text-shadow: 4px 4px 4px #333;
-  }
-
-  100% {
-      font-size: 0px;
-      text-align: center;
-      color: #5555;
-  }
-}
 
 .cardBoxTexto{
   text-align: center;
