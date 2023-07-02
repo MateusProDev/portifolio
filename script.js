@@ -65,3 +65,15 @@ document.getElementById("contact-form").addEventListener("submit", function(even
       console.error("Erro ao enviar o e-mail:", error);
     });
 });
+
+// animação para aparecer
+
+document.addEventListener("scroll", function() {
+  var sobreElement = document.querySelector(".sobre");
+  var sobreElementOffset = sobreElement.offsetTop;
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > sobreElementOffset - window.innerHeight + 200) {
+    sobreElement.classList.add("aparecer");
+  }
+});
