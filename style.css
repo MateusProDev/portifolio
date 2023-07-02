@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(2, 34, 65);
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: #000000;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* inicio do modelo responsivo do menu*/                         
@@ -12,8 +12,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-   
+    margin-right: 20px;
+}
+
+.banner img {
+  width: 300px;
+  margin-top: -10px;
+}
+
+.imgDev{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .containerNav {
@@ -24,7 +34,7 @@ header {
 .containerNav .line {
   width: 25px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: #2e2e2e;
   margin: 5px;
 }
 
@@ -44,7 +54,7 @@ header {
 
 /* modelo para console */
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 676px){
   .nav-links {
     display: none;
   }
@@ -55,10 +65,10 @@ header {
   }
 
   .nav-links li {
-    margin: -50px 0 60px 20px;
+    margin-left: 50px;
   }
   .nav-links a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 16px;
   }
@@ -83,7 +93,7 @@ header {
     left: 0;
     width: 100%;
     height: 40%;
-    background-color: #9a9ca098;
+    background-color: #000000d3;
     opacity: 0.9;
     padding: 20px;
     color: #11a1bb;
@@ -91,7 +101,6 @@ header {
   
   .nav-links.active li {
     padding-top: 20px;
-
   }
   
   .nav-links.active li a{
@@ -101,7 +110,7 @@ header {
   }
   .logo img {
     width: 100px;
-    margin-left: -20px;
+    margin-left: 20px;
   }
   #elementoUm{
     width: 22px;
@@ -110,19 +119,19 @@ header {
   #elementoDois{
     width: 0;
   }
-  .banner img {
-    width: 240px;
-    margin: 0;
-    margin-top: -10px;
+  .banner{
+    margin: 150px 0  250px 0;
   }
   .banner h1{
     font-size: 30px;
+    text-align: center;
   }
   
   .banner p{
     font-family: monospace;
     font-size: 18px;
     margin-top:  -20px;
+    text-align: center;
   }
   .sobre{
     margin: 22px;
@@ -252,6 +261,9 @@ header {
     font-size: 14px;
     
   }
+  .cardCodeBox:hover {
+    box-shadow: 4px 4px 4px #33333362;
+  }
   .cardTop{
     background-image: 0;
     background-color: #5f5f5f;
@@ -263,10 +275,12 @@ header {
   }
   
   .cardCorpo {
-      width: 200px;
+      width: 100;
       padding: 10px 10px 20px 10px;
       text-align: justify;
+      background-color: #b1b1b133;
   }
+  
   .code-box {
     font-family: 'Courier New', monospace;
     font-size: 14px;
@@ -340,19 +354,23 @@ header {
     text-align: center;
   }
   #autor{
-    margin: 10px 0 10px 0;
+    margin: 0;
     font-size: 11px;
-    color: #ebebeb;
+    color: #575757;
     text-align: center;
-    padding: 0 10px;
+    padding: 5px 20px;
+    background-color: #fff;
   }
   #autor a{
-    color: #ebebeb;
+    color: #575757;
     text-decoration: none;
   }
 }
 
-@media screen and (min-width: 460px){
+@media screen and (min-width: 676px){
+  body {
+    width: 70%;
+  }
   body h1{
     margin: 30px 0;
     font-size: 40px;
@@ -364,8 +382,8 @@ header {
   }
   
   .logo img {
-    width: 150px;
-    margin: 20px 0 0 -20px;
+    width: 200px;
+    margin: 20px 0 0 0px;
   }
   #elementoUm{
     width: 0;
@@ -375,13 +393,13 @@ header {
     margin: 0 1px 5px 100px;
   }
   .nav-links li {
-    margin: 30px 0 0 20px;
+    margin: 30px 0 0 15px;
   }
 
   .nav-links a {
-    color: #fff;
+    color: #0c0c0c;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .sobre{
@@ -399,11 +417,11 @@ header {
     margin: 0 30px 30px 0 ;
     padding: 0 10%;
   }
-  .banner img {
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -10px;
+  .banner{
+    height: 360px;
+    text-align: center;
+    padding-top: 180px;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.253);
   }
   .banner h1{
     font-size: 50px;
@@ -612,14 +630,15 @@ header {
     margin-top: 0;
   }
   #autor{
-    margin: 10px 0 10px 0;
-    font-size: 16px;
-    color: #ebebeb;
+    margin: 0;
+    font-size: 11px;
+    color: #575757;
     text-align: center;
-    padding: 0;
+    padding: 5px 20px;
+    background-color: #fff;
   }
   #autor a{
-    color: #ebebeb;
+    color: #575757;
     text-decoration: none;
   }
 }
@@ -648,14 +667,6 @@ header {
   height: 30px;
   margin: 5px 0;
 }
-
-.banner{
-  height: 360px;
-  text-align: center;
-  padding-top: 180px;
-  text-shadow: 4px 3px 5px rgba(0, 0, 0, 0.459);
-}
-
 
 .conteudo{
     margin: 0;
@@ -809,7 +820,7 @@ header {
 }
 
 .code-box .property {
-  color: #c9c9c9;
+  color: #5c5c5c;
 }
 
 .code-box .value {
