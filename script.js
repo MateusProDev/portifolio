@@ -5,6 +5,58 @@ barbearia.addEventListener('click', () => {
   barbearia.classList.toggle('active');
   navLinks.classList.toggle('active');
 });
+// rolagem horizontalmetente do container card
+var containerBanner = document.querySelector(".containerBanner");
+var isDragging = false;
+var startPosition = 0;
+var startScrollLeft = 0;
+
+containerBanner.addEventListener("mousedown", function(event) {
+  isDragging = true;
+  startPosition = event.clientX;
+  startScrollLeft = containerBanner.scrollLeft;
+});
+
+containerBanner.addEventListener("mousemove", function(event) {
+  if (!isDragging) return;
+  var distance = event.clientX - startPosition;
+  containerBanner.scrollLeft = startScrollLeft - distance;
+});
+
+containerBanner.addEventListener("mouseup", function() {
+  isDragging = false;
+});
+
+containerBanner.addEventListener("mouseleave", function() {
+  isDragging = false;
+});
+
+// rolagem horizontalmente dos projetos
+var containerHover = document.querySelector(".containerHover");
+var isDragging = false;
+var startPosition = 0;
+var startScrollLeft = 0;
+
+containerHover.addEventListener("mousedown", function(event) {
+  isDragging = true;
+  startPosition = event.clientX;
+  startScrollLeft = containerHover.scrollLeft;
+});
+
+containerHover.addEventListener("mousemove", function(event) {
+  if (!isDragging) return;
+  var distance = event.clientX - startPosition;
+  containerHover.scrollLeft = startScrollLeft - distance;
+});
+
+containerHover.addEventListener("mouseup", function() {
+  isDragging = false;
+});
+
+containerHover.addEventListener("mouseleave", function() {
+  isDragging = false;
+});
+
 
 // animação dos cards
 function activateBox(box) {
