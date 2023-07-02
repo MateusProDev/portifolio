@@ -21,74 +21,13 @@ function rotateOut(box) {
   box.classList.remove('cardCodeBox-hover');
 }
 
-// mudadar o site de cor
-
-var body = document.body;
-var titulo = document.querySelector("h1");
-var paragrafos = document.querySelectorAll("p");
-var corOriginal = {
-  backgroundColor: body.style.backgroundColor,
-  color: body.style.color,
-  tituloColor: titulo.style.color,
-  paragrafoColors: []
-};
-
-paragrafos.forEach(function(paragrafo) {
-  corOriginal.paragrafoColors.push(paragrafo.style.color);
-});
-
-var elementoUm = document.getElementById("elementoUm");
-var clicado = false;
-
-elementoUm.addEventListener("click", function() {
-  if (clicado) {
-    body.style.backgroundColor = corOriginal.backgroundColor;
-    body.style.color = corOriginal.color;
-    titulo.style.color = corOriginal.tituloColor;
-    paragrafos.forEach(function(paragrafo, index) {
-    paragrafo.style.color = corOriginal.paragrafoColors[index];
-    });
-    clicado = false;
-  } else {
-    body.style.backgroundColor = "#11a1bb";
-    body.style.color = "black";
-    titulo.style.color = "#fff";
-    paragrafos.forEach(function(paragrafo) {
-      paragrafo.style.color = "";
-    });
-    clicado = true;
-  }
-});
-
-var elementoUm = document.getElementById("elementoDois");
-
-elementoDois.addEventListener("click", function() {
-  if (clicado) {
-    body.style.backgroundColor = corOriginal.backgroundColor;
-    body.style.color = corOriginal.color;
-    titulo.style.color = corOriginal.tituloColor;
-    paragrafos.forEach(function(paragrafo, index) {
-    paragrafo.style.color = corOriginal.paragrafoColors[index];
-    });
-    clicado = false;
-  } else {
-    body.style.backgroundColor = "#11a1bb";
-    body.style.color = "black";
-    titulo.style.color = "#fff";
-    paragrafos.forEach(function(paragrafo) {
-      paragrafo.style.color = "";
-    });
-    clicado = true;
-  }
-});
-
 // redes rolagem 20%
 
 window.addEventListener('scroll', function() {
   var redesSociais = document.querySelector('.redes-sociais');
   var distanciaTopo = document.documentElement.scrollTop || document.body.scrollTop;
   var alturaTela = window.innerHeight;
-  var limiteAparecer = alturaTela * 0.9;
+  var limiteAparecer = alturaTela * 0.5;
 
   if (distanciaTopo > limiteAparecer) {
     redesSociais.classList.add('show');
